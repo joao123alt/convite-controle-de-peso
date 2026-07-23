@@ -1,0 +1,135 @@
+.hero {
+  position: relative;
+  padding: 60px 0 56px;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(17, 17, 17, 0.65) 0%,
+    rgba(17, 17, 17, 0.78) 40%,
+    rgba(17, 17, 17, 0.97) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.logoWrap {
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6));
+  margin-bottom: 4px;
+}
+
+.badgeWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  max-width: 600px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.subheading {
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(247, 247, 247, 0.82);
+}
+
+.subheading strong {
+  color: var(--primary-hover);
+  font-weight: 700;
+}
+
+.subheading em {
+  font-style: normal;
+  color: rgba(247, 247, 247, 0.6);
+}
+
+.ctaRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.ctaBtn {
+  font-size: 15px;
+  padding: 16px 32px;
+}
+
+.ctaNote {
+  font-size: 12px;
+  color: rgba(247, 247, 247, 0.45);
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 14px 28px;
+  backdrop-filter: blur(10px);
+  margin-top: 4px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.statNumber {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary-hover);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.statDivider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 48px 0 48px;
+  }
+  .stats {
+    gap: 14px;
+    padding: 12px 18px;
+  }
+  .statNumber {
+    font-size: 17px;
+  }
+}

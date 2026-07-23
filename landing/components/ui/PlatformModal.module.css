@@ -1,0 +1,125 @@
+/* -- Modal -- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modalContent {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: modalEnter 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.modalClose:hover {
+  color: var(--text-light);
+}
+
+.modalHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.modalSub {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.platformBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  justify-content: space-between;
+}
+
+.pIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.pLabels {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  padding-left: 2px;
+  gap: 1px;
+}
+
+.pLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pSub {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.pArrow {
+  font-size: 16px;
+  opacity: 0.45;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.platformBtn:hover .pArrow {
+  opacity: 1;
+  transform: translateX(4px);
+  color: var(--primary);
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

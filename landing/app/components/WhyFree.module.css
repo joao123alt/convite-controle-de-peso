@@ -1,0 +1,299 @@
+.section {
+  background: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.topAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--primary-hover), var(--primary), transparent);
+}
+
+/* ── Two-column grid ── */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Left column: Why Free ── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  margin-bottom: 6px;
+}
+
+.intro {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.asks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.askItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+}
+
+.askItem:hover {
+  border-color: rgba(239, 104, 32, 0.3);
+}
+
+.askIcon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.askText {
+  font-size: 14px;
+  color: rgba(247, 247, 247, 0.8);
+  line-height: 1.5;
+}
+
+.yearBadge {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(239, 104, 32, 0.12), rgba(255, 116, 76, 0.05));
+  border: 1px solid rgba(239, 104, 32, 0.22);
+  border-radius: var(--radius-md);
+}
+
+.yearIcon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.yearTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-hover);
+  margin-bottom: 3px;
+}
+
+.yearDesc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Right column: Platforms ── */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.illusWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.ctaHeading {
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.ctaSub {
+  text-align: center;
+  font-size: 13px;
+}
+
+.platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.platformBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  justify-content: space-between;
+}
+
+.pIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.pLabels {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+  padding-left: 2px;
+  gap: 1px;
+}
+
+.pLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pSub {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.pArrow {
+  font-size: 16px;
+  opacity: 0.45;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.platformBtn:hover .pArrow {
+  opacity: 1;
+  transform: translateX(4px);
+  color: var(--primary);
+}
+
+.mainCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainCta a,
+.mainCta button {
+  font-size: 14px;
+  padding: 15px 28px;
+}
+
+.closing {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.closing strong {
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.whatsapp {
+  color: #25D366;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Desktop two-column ── */
+@media (min-width: 700px) {
+  .grid {
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start;
+  }
+
+  .leftCol {
+    flex: 1;
+  }
+
+  .rightCol {
+    flex: 1;
+  }
+}
+
+/* -- Modal -- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modalContent {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  animation: modalEnter 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.modalClose:hover {
+  color: var(--text-light);
+}
+
+.modalHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.modalSub {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
