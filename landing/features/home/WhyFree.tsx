@@ -33,11 +33,10 @@ export default function WhyFree() {
               </h2>
               <p className={`text-body ${styles.intro}`}>
                 O Método VidaVem está em fase final de testes. Liberamos vagas 
-                gratuitas para construir nossos casos de sucesso. Mas atenção: 
-                <strong> o acesso gratuito não é garantido de forma vitalícia</strong>. 
-                Ainda estamos definindo as políticas para os usuários da fase Beta, 
-                portanto, existe a possibilidade de que a plataforma passe a ser 
-                cobrada em breve.
+                gratuitas para construir nossos casos de sucesso. Quem garantir 
+                sua vaga durante a fase Beta terá <strong>1 ano de acesso 100% gratuito</strong>. 
+                O acesso não é vitalício, mas o seu primeiro ano está totalmente 
+                garantido sem nenhum custo.
               </p>
               <p className={`text-body ${styles.intro}`} style={{ marginTop: "10px", fontSize: "14px", color: "var(--text-muted)" }}>
                 Em contrapartida por usar gratuitamente agora, pedimos apenas:
@@ -77,7 +76,7 @@ export default function WhyFree() {
                 Garantir Minha Vaga Gratuita <ArrowRight size={18} />
               </button>
               <p style={{ fontSize: "12px", color: "var(--text-muted)", marginTop: "8px", textAlign: "center" }}>
-                Grátis por tempo indeterminado apenas durante a fase Beta. Acesso não vitalício.
+                1 ano de acesso gratuito garantido para cadastrados na fase Beta.
               </p>
             </div>
 
