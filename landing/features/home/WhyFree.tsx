@@ -10,7 +10,7 @@ import PlatformModal from "@/components/ui/PlatformModal";
 const asks = [
   { icon: <Bug size={20} />, text: "Reportar eventuais falhas na plataforma" },
   { icon: <ClipboardList size={20} />, text: "Responder questionários de acompanhamento" },
-  { icon: <MessageSquare size={20} />, text: "Fazer um depoimento ao final do Método" },
+  { icon: <MessageSquare size={20} />, text: "Fazer um depoimento ao atingir a meta (opcional)" },
 ];
 
 export default function WhyFree() {
