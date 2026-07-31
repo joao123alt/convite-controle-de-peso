@@ -13,8 +13,8 @@ const asks = [
 ];
 
 const platforms = [
-  { id: "android", icon: <FaAndroid size={24} />, label: "Android", sub: "Google Play", href: "#" },
-  { id: "iphone",  icon: <FaApple size={24} />, label: "iPhone",  sub: "App Store",   href: "#" },
+  { id: "android", icon: <FaAndroid size={24} />, label: "Android", sub: "Google Play", href: "https://play.google.com/apps/testing/com.vidavem.controlepeso" },
+  { id: "iphone",  icon: <FaApple size={24} />, label: "iPhone",  sub: "App Store",   href: "https://apps.apple.com/br/app/controle-de-peso-vidavem/id6757395665?l=en-GB" },
 ];
 
 export default function WhyFree() {
@@ -126,6 +126,8 @@ export default function WhyFree() {
                 <Link
                   key={p.id}
                   href={p.href}
+                  target={p.href.startsWith("http") ? "_blank" : undefined}
+                  rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   id={`cta-modal-${p.id}`}
                   className={`btn-platform ${styles.platformBtn}`}
                 >

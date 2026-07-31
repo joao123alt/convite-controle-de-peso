@@ -29,6 +29,8 @@ export default function PlatformModal({ isOpen, onClose, platforms }: PlatformMo
             <Link
               key={p.id}
               href={p.href}
+              target={p.href.startsWith("http") ? "_blank" : undefined}
+              rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
               id={`cta-modal-${p.id}`}
               className={`btn-platform ${styles.platformBtn}`}
             >

@@ -9,6 +9,18 @@ export interface Platform {
 }
 
 export const platforms: Platform[] = [
-  { id: "android", icon: <FaAndroid size={24} />, label: "Android", sub: "Google Play", href: "#" },
-  { id: "iphone",  icon: <FaApple size={24} />,   label: "iPhone",  sub: "App Store",   href: "#" },
+  { 
+    id: "android", 
+    icon: <FaAndroid size={24} />, 
+    label: "Android", 
+    sub: "Google Play", 
+    href: "https://play.google.com/apps/testing/com.vidavem.controlepeso" 
+  },
+  { 
+    id: "iphone",  
+    icon: <FaApple size={24} />,   
+    label: "iPhone",  
+    sub: "App Store",   
+    href: "https://apps.apple.com/br/app/controle-de-peso-vidavem/id6757395665?l=en-GB" 
+  },
 ];

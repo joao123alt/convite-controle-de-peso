@@ -8,14 +8,14 @@ const platforms = [
     icon: "📱",
     label: "Celular Android",
     sub: "Google Play Store",
-    href: "#",
+    href: "https://play.google.com/apps/testing/com.vidavem.controlepeso",
   },
   {
     id: "iphone",
     icon: "📱",
     label: "Celular iPhone",
     sub: "Apple App Store",
-    href: "#",
+    href: "https://apps.apple.com/br/app/controle-de-peso-vidavem/id6757395665?l=en-GB",
   },
   {
     id: "web",
@@ -64,6 +64,8 @@ export default function PlatformCTA() {
             <Link
               key={p.id}
               href={p.href}
+              target={p.href.startsWith("http") ? "_blank" : undefined}
+              rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
               id={`cta-${p.id}`}
               className={`btn-platform ${styles.platformBtn}`}
             >
